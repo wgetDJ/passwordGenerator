@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.content {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    padding: 35px 20px;
+    background-color: #111111;
+    color: #eeeeee;
+    width: 400px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    letter-spacing: .1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                0 2px 2px rgba(0, 0, 0, 0.12),
+                0 4px 4px rgba(0, 0, 0, 0.12),
+                0 8px 8px rgba(0, 0, 0, 0.12),
+                0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.password {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: 1rem;
+    padding: 0 10px;
+    text-align: left;
+    border: 1px #555555 solid;
+    background-color: #222222;
+}
+#placeHolder {
+    line-height: 2rem;
+    color: #777777;
+}
+#copy {
+    line-height: 2rem;
+    font-family: 'Material Icons';
+    margin-left: 20px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.option label {
+    line-height: 1.5rem;
+    font-size: .8rem;
+}
+input:checked {
+    background-color: #eeeeee;
+}
+label {
+    color: #555555;
+}
+
+.btn {
+    align-items: center;
+    text-align: center;
+}
+#btn {
+    background-color: #eeeeee;
+    width: 200px;
+    color: #111111;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}

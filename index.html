@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password Generator | JavaScript</title>
+
+	<meta charset="UTF-8">
+
+	<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+	<link rel="shortcut icon" type="image/svg" href="./assets/image/safe.svg"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="./assets/css/styles.css" type="text/css" charset="utf-8" />
+
+</head>
+<body>
+
+	<div class="content">
+
+		<div class="container">
+
+			<div class="password">
+				<div class="pswd">
+					<span id="placeHolder">Your Password</span>
+					<span id="yourPassword"></span>
+				</div>
+				<div class="copy">
+					<span class="material-icons-outlined" id="copy" title="copy">content_copy</span>
+				</div>
+			</div>
+
+			<div class="option">
+
+				<div>
+					<input type="radio" id="uppercase">
+					<label for="html">Uppercase Letters</label>
+				</div>
+
+				<div>
+					<input type="radio" id="lowercase">
+					<label for="html">Lowercase Letters</label>
+				</div>
+
+				<div>
+					<input type="radio" id="specialCharactor">
+					<label for="html">Special charactors</label>
+				</div>
+
+			</div>
+
+			<!-- <p>
+				<span id=colour>#eeeeeee</span>
+				<span class="material-icons-outlined" id="copy" title="copy">content_copy</span>
+			</p> -->
+			<div class="btn">
+				<button id="btn">Generate PassWord</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

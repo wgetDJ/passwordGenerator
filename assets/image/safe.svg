@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="105.83333mm"
+   height="105.83333mm"
+   viewBox="0 0 105.83333 105.83333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   sodipodi:docname="safe.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.42760943"
+     inkscape:cx="319.21654"
+     inkscape:cy="77.173228"
+     inkscape:window-width="1366"
+     inkscape:window-height="702"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       originx="-26.458334"
+       originy="-63.500002" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1255"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect865"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect861"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.458333,-63.499999)">
+    <path
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 26.458333,74.083332 c 0,0 0,-10.583333 10.583333,-10.583333 10.583333,0 84.666664,0 84.666664,0 0,0 10.58333,0 10.58333,10.583333 0,10.583334 0,84.666668 0,84.666668 0,0 0,10.58333 -10.58333,10.58333 -10.58333,0 -84.666664,0 -84.666664,0 0,0 -10.583333,0 -10.583333,-10.58333 0,-10.58334 0,-84.666668 0,-84.666668 z"
+       id="path1839" />
+    <path
+       id="path859"
+       style="fill:#999999;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 300,280 c -26.17994,0 -52.19893,10.77705 -70.71094,29.28906 C 210.77705,327.80107 200,353.82006 200,380 v 20 c 0,0 0,20 20,20 20,0 20,-20 20,-20 v -20 c 0,-15.70796 6.46701,-31.31857 17.57422,-42.42578 C 268.68143,326.46701 284.29204,320 300,320 c 15.70796,0 31.31857,6.46701 42.42578,17.57422 C 353.53299,348.68143 360,364.29204 360,380 v 60 h 40 V 380 C 400,353.82006 389.22295,327.80107 370.71094,309.28906 352.19893,290.77705 326.17994,280 300,280 Z"
+       transform="scale(0.26458333)" />
+    <path
+       style="fill:#1a1a1a;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 79.374999,116.41667 H 111.125 c 0,0 5.29167,0 5.29167,5.29166 0,5.29167 0,31.75 0,31.75 0,0 0,5.29167 -5.29167,5.29167 -5.29167,0 -63.500001,0 -63.500001,0 0,0 -5.291666,0 -5.291666,-5.29167 0,-5.29167 0,-31.75 0,-31.75 0,0 0,-5.29166 5.291666,-5.29166 5.291667,0 31.75,0 31.75,0 z"
+       id="path1101" />
+    <path
+       id="path1253"
+       style="fill:#999999;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 300,500 c -5.23599,0 -10.44018,2.15502 -14.14258,5.85742 C 282.15502,509.55982 280,514.76401 280,520 c 0,5.23599 2.15502,10.44018 5.85742,14.14258 1.23221,1.23221 2.63194,2.29112 4.14258,3.1582 V 570 c 0,0 0,10 10,10 10,0 10,-10 10,-10 v -32.69922 c 1.51064,-0.86708 2.91037,-1.92599 4.14258,-3.1582 C 317.84498,530.44018 320,525.23599 320,520 c 0,-5.23599 -2.15502,-10.44018 -5.85742,-14.14258 C 310.44018,502.15502 305.23599,500 300,500 Z"
+       transform="scale(0.26458333)" />
+  </g>
+</svg>
