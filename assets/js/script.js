@@ -1,31 +1,75 @@
-const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+// TODO
+// 1. Create 3 arrays :UpperCase, LowerCase, Special Characters
+// 2. create an array containing all the above arrays
+// 3. Generate two random numbers:
+// 3-1. for the second array to get the array from 2
+// 3-2. for the value from the array
+// 4. If all boxes are checked then run a for loop,
+// to generate to get one of the 3 arrays randomly
+// then get the value randomly from that array
+// 5. If some of the boxes are checked then
+// go through the mase as 4 but if unchecked number comes in
+// then ignore that and keep on going. Probably a switch statement
 
-const btn = document.getElementById("btn");
-const colour = document.getElementById("colour");
-const copy = document.getElementById("copy");
 
-const colourChange = () => {
-    let newColour = hexColour();
-    document.body.style.backgroundColor = newColour;
-    colour.textContent = newColour;
-    colour.style.color = newColour;
-    copy.style.color = "#eeeeee"; // Resetting the copy color
-}
+const upperCase = ["A", "B", "C", "D", "E" , "F" , "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const specialCharacters = [" ", "!", "'", '"', "(", ")", "*", "+", ",", "-", "_", ".", "/", ":", ";", "<", ">", "=", "?", "[", "]", "\\", "^", "`", "~", "{", "}"];
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-const hexColour = () => {
-    let hexValue = "#";
-    for(i = 0; i < 6; i++) {
-        hexValue += hex[Math.floor(Math.random() * hex.length)];
+const allArrays = [upperCase, lowerCase, specialCharacters, numbers];
+
+const btn = document.querySelector("#btn");
+const copy = document.querySelector("#copy");
+const placeHolder = document.querySelector("#placeHolder");
+const yourPassword = document.querySelector("#yourPassword");
+const message = document.querySelector("#msg");
+const uCase = document.querySelector("#upperCase");
+const lCase = document.querySelector("#lowerCase");
+const nums = document.querySelector("#numbers");
+const splChar = document.querySelector("#specialCharacters");
+
+const generatePassword = () => {
+    const checkBoxs = [uCase.checked, lCase.checked, nums.checked, splChar.checked];
+    let unchecked = 0;
+
+// checking the number of unchecked boxes
+    for (let checks of checkBoxs) {
+        if(checks == false) {
+            unchecked++;
+        }
     }
-    return hexValue;
+
+    if (unchecked > 2) {
+       message.textContent = "Plese select at least two!" 
+    }
+    else {
+        let pswd = "";
+        for (let i = 0; i < 20; i++) {
+            pswd += password(checkBoxs);
+        }
+        yourPassword.textContent = pswd;
+        placeHolder.style.display = "none";
+
+    }
 }
 
-const copyColour = () => {
-    let colourToCopy = document.getElementById("colour");
+const password = (checkBoxs) => {
+    checkBoxValue = checkBoxs[Math.floor(Math.random() * checkBoxs.length)];
+    if (checkBoxValue == false) {
+        password(checkBoxs);
+    }
+    else {
+        chracter = checkBoxs[checkBoxValue][Math.floor(Math.random() * checkBoxs[checkBoxValue].length)];
+    }
+}
+
+const copyPassword = () => {
+    let passwordToCopy = document.querySelector("#yourPassword");
     let cb = navigator.clipboard;
-    cb.writeText(colourToCopy.innerText);
+    cb.writeText(passwordToCopy.innerText);
     copy.style.color = "#15e638";
 }
 
-btn.addEventListener("click", colourChange);
-copy.addEventListener("click", copyColour);
+btn.addEventListener("click", generatePassword);
+copy.addEventListener("click", copyPassword);
