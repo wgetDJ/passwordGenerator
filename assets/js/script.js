@@ -48,7 +48,7 @@ const generatePassword = (uCaseValue, lCaseValue, numsValue, splCharValue) => {
        message.style.color = "#ff0000";
        placeHolder.style.display = "block";
        placeHolder.textContent = "Please try again!"
-       yourPassword.style.display = "none";
+       yourPassword.textContent = "";
     }
     else {
         let pswd = "";
