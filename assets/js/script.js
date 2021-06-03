@@ -14,6 +14,7 @@ const uCase = document.querySelector("#upperCase");
 const lCase = document.querySelector("#lowerCase");
 const nums = document.querySelector("#numbers");
 const splChar = document.querySelector("#specialCharacter");
+const passwordToCopy = document.querySelector("#yourPassword");
 
 const randomCharacter = (allCharacters, checkBoxValues) => {
     let character = "";
@@ -28,7 +29,6 @@ const randomCharacter = (allCharacters, checkBoxValues) => {
     let randomCheckBoxValue = Math.floor(Math.random() * availableCharacters.length);
     let selectedArray = [];
     selectedArray = availableCharacters[randomCheckBoxValue];
-
     character = selectedArray[Math.floor(Math.random() * selectedArray.length)];
 
     return character;
@@ -37,6 +37,7 @@ const randomCharacter = (allCharacters, checkBoxValues) => {
 const generatePassword = (uCaseValue, lCaseValue, numsValue, splCharValue) => {
     let unchecked = 0;
     let checkBoxValues = [uCaseValue, lCaseValue, numsValue, splCharValue];
+
     for (let checks of checkBoxValues) {
         if(checks == false) {
             unchecked++;
@@ -44,33 +45,51 @@ const generatePassword = (uCaseValue, lCaseValue, numsValue, splCharValue) => {
     }
 
     if (unchecked > 2) {
-       message.textContent = "Please select at least two!";
-       message.style.color = "#ff0000";
-       placeHolder.style.display = "block";
-       placeHolder.textContent = "Please try again!"
-       yourPassword.textContent = "";
+        yourPassword.textContent = "";
+        userErrorMessage();
+        resetCopyIcon();
     }
     else {
         let pswd = "";
         for (let i = 0; i < 20; i++) {
             pswd += randomCharacter(allCharacters, checkBoxValues);
         }
-        yourPassword.textContent = pswd;
-        yourPassword.style.display = "block";
-        placeHolder.style.display = "none";
-        copy.style.color = "#eeeeee";
-        copy.title = "Copy";
-        message.textContent = "Click the copy icon to copy your password.";
-        message.style.color = "#555555";
+        showPassword(pswd);
+        showCopyMessage();
+        resetCopyIcon();
     }
 }
 
+const showPassword = (password) => {
+    yourPassword.textContent = password;
+    yourPassword.style.display = "block";
+    placeHolder.style.display = "none";
+}
+
+const showCopyMessage = () => {
+    message.textContent = "Click the copy icon to copy your password.";
+    message.style.color = "#555555";
+}
+
+const userErrorMessage = () => {
+    message.textContent = "Please select at least two!";
+    message.style.color = "#ff0000";
+    placeHolder.style.display = "block";
+    placeHolder.textContent = "Please try again!"
+}
+
 const copyPassword = () => {
-    let passwordToCopy = document.querySelector("#yourPassword");
-    let cb = navigator.clipboard;
-    cb.writeText(passwordToCopy.innerText);
-    copy.style.color = "#15e638";
-    copy.title = "Copied";
+    if (passwordToCopy.innerText != "") {
+        let cb = navigator.clipboard;
+        cb.writeText(passwordToCopy.innerText);
+        copy.style.color = "#15e638";
+        copy.title = "Copied";
+    }
+}
+
+const resetCopyIcon = () => {
+    copy.style.color = "#eeeeee";
+    copy.title = "Copy";
 }
 
 btn.addEventListener("click", function(){generatePassword(uCase.checked, lCase.checked, nums.checked, splChar.checked)}, false);
