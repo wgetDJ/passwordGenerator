@@ -62,7 +62,7 @@ body {
 
 .message,
 .option {
-    display: none;
+    /* display: none; */
 }
 
 .option label {
